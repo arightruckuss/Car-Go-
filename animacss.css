@@ -1,0 +1,260 @@
+body {	
+		margin: 0px;
+		}
+.sky {
+	background-color: lightblue;
+	height: 175px;
+	}
+.sun {	
+	background-color: yellow;
+	position: absolute;
+	top: 30px;
+	height: 60px;
+	width: 60px;
+    margin-left: 700px;
+    border-radius: 50%;
+	}
+.grass {
+	background-color: darkgreen;
+	height: 204px;
+	}
+.curb {
+	background-color: red;
+	height: 15px;
+    }
+
+/*Finishing Line*/
+#finishline	{
+	width: 150px;
+	position: relative;
+	top: -300px;
+	left: 1049px;
+	border-spacing: 15px;
+	}
+tr:nth-child(odd) {
+	background-color: black;
+	}
+tr:nth-child(even) {
+	background-color: white;
+	}
+td	{
+	height: 40px; 
+	margin-left: 1000px;
+    margin-top: 510px;
+    }
+
+/*Road and road lines*/
+.road {
+	background-color: gray;
+	height: 300px;
+	}
+hr.line1	{
+	position: absolute;
+	border: 10px solid white;
+	margin-left: 250px;
+	margin-top: 510px;
+	width: 100px;
+	}
+hr.line2	{
+	position: absolute;
+	border: 10px solid white;
+	margin-left: -50px;
+    margin-top: 510px;
+    width: 100px;
+	}
+hr.line3	{
+	position: absolute;
+	border: 10px solid white;
+	margin-left: 550px;
+	margin-top: 510px;
+	width: 100px;
+	}
+hr.line4	{
+	position: absolute;
+	border: 10px solid white;
+	margin-left: 850px;
+	margin-top: 510px;
+	width: 100px;
+	}
+
+/*Constant flying plane*/
+.plane	{
+    position: absolute;
+    top: 50px;
+    left: -150px;
+    height: 30px;
+	animation-name: fly;
+	animation-duration: 7s;
+	animation-iteration-count: infinite;
+	animation-delay: 0s;
+	animation-timing-function: linear;
+	}
+@keyframes fly{
+	from{ transform: translatex(-100px)}
+	to{ transform: translatex(1500px)}
+    }
+    
+/*Constant and flashing flag images*/
+#flag1	{
+	position: absolute;
+	top: 255px;
+    left: 979px;    	
+    transform: scaleX(-1);
+    animation-name: flag1;
+    animation-duration: 0.5s;
+    animation-delay: 2s;
+	animation-iteration-count: 8;
+    display:none;
+    height: 150px;
+	}
+@keyframes flag1 {
+	0% { opacity: 1; }
+	50% { opacity: 0; }
+	100% { opacity: 1; }
+}
+#flag2	{
+	position: absolute;
+	top: 255px;
+    left: 1105px;
+	animation-name: flag2;
+	animation-duration: 0.5s;
+	animation-delay: 1.75s;
+    animation-iteration-count: 8;
+    display:none;
+    height: 150px;
+	}
+@keyframes flag2 { 
+	0% { opacity: 1; }
+	50% { opacity: 0; }
+	100% { opacity: 1; }
+	}
+#flag3	{
+	position: absolute;
+	top: 255px;
+    left: 979px;	
+    transform: scaleX(-1);
+    display:block;
+    height: 150px;
+	}
+#flag4	{
+	position: absolute;
+	top: 255px;
+    left: 1105px;
+    display:block;
+    height: 150px;
+    }
+
+#statement {
+    height:30x;
+    width:170px;
+    color:rgb(0, 0, 0);
+    font-size:20px;
+    background-color: rgb(120, 120, 120);
+    text-shadow: rgb(0, 0, 0) -1px 1px 0px;
+    text-align: center;
+    border: 5px dotted red;
+    position:absolute;
+    left:23px;
+    top:289px;
+    }
+
+/*Traffic Light*/
+.tlcss { 
+    position: absolute;
+    height: 120px;
+    top: 259px;
+    left: 220px;
+    }
+
+/*Start button images*/
+#startbutton {
+    position: absolute;
+    box-shadow: -4px 4px 0px 0px #899599;
+    background-color:#77d42a;
+    border-radius:6px;
+    border:1px solid #268a16;
+    top: 330px;
+    left: 60px;
+    display:inline-block;
+    cursor:pointer;
+    color:#306108;
+    font-family:Arial;
+    font-size:20px;
+    font-weight:bold;
+    padding:5px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #aade7c;
+    height:29px;
+    width:87px;
+    line-height: 15px;
+    display: none;
+}
+#startbutton:hover {
+    background:linear-gradient(to bottom, #5cb811 5%, #77d42a 100%);
+    background-color:#5cb811;
+}
+#startbutton:active {
+    position:absolute;
+    top:334px;
+    box-shadow: 0px 0px 0px 0px #899599;
+}
+
+/*Gun images*/
+#raceGun { 
+    position: absolute;
+    height: 50px;
+    top: 297px;
+    left: 297px;
+    transform: rotate(0deg);
+    display: block;
+    }
+#gunFired { 
+    position: absolute;
+    height: 50px;
+    top: 297px;
+    left: 297px;
+    transform: rotate(-45deg);  
+    display: none;
+    }
+#gunFire { 
+    position: absolute;
+    height: 60px;
+    top: 224px;
+    left: 351px;
+    transform: rotate(5deg);
+    display: none;
+    }
+#gunSmoke { 
+    position: absolute;
+    height: 100px;
+    top: 163px;
+    left: 406px;
+    transform: rotate(47deg);
+    display: none;
+    }
+
+/*Car images*/
+#cargo { 
+    position: absolute;
+    height: 95px;
+    top: 370px;
+    left: -200px;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease; 
+    animation-name: cargo;
+    animation-fill-mode: forwards;
+    z-index: 1;
+    display: none;
+    }
+@keyframes cargo {
+    from {right: 0px;}
+    to {left: 1200px;}
+    }
+#carStop {
+    position: absolute;
+    height: 95px;
+    top: 370px;
+    left: -200px;
+    display: block;
+    }
